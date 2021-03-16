@@ -1,86 +1,193 @@
-<!DOCTYPE html>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-    <head>
-        <title>INSERT TITLE HERE</title>
-        <!-- add some more style here if needed -->
-        <script src="healthyHouseScript.js"></script>
-        <link rel="stylesheet" href="healthyHouseStyle.css">
-    </head>
-    <body>
-        <header>
-            <h1> Demonstration Survey Tool</h1>
-            <a href="">Start</a>
-            <!-- these just add space between the buttons -->
-            &nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;
-            <a href="">About Us</a>
-        </header>
-        <div id="navbar">
-            <!-- fill these in with the intended destination later -->
-            <a href="">Contact Us</a>
-            <a href="">Providers</a>
-            <div class="progress-container">
-                <div class="progress-bar" id="myBar"></div>
-            </div>
-        </div>
+<head>
+<title>Healthy House - Within A MATCH Coalition</title>
 
-        <section id="About this survey" style="margin-left:350px;margin-right:350px;line-height:3">
-            <h3>About this survey</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quae, explicabo modi exercitationem pariatur sapiente quos dicta harum amet est minus omnis! Consequuntur quo officiis consectetur possimus culpa fuga. Culpa?</p>
-        </section>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="Building Understanding Between Cultures">
+<meta name="keywords" content="merced, atwater, winton, los banos, livingston, modesto, turlock, hilmar, healthy, house, ethnic, culture, minority, language, help">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
 
-        <section id="Healthy House" style="margin-left:350px;margin-right:350px;line-height:3">
-            <h3>Healthy House</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit assumenda nostrum aliquid commodi consequuntur ab eius ullam reprehenderit! Impedit nemo iste dolores molestias aspernatur quam iusto sint quis voluptates? Quo?</p>
-        </section>
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
 
-        <section id="Mission Statement" style="margin-left:350px;margin-right:350px;line-height:3">
-            <h3>Mission Statement</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt iure corporis tempore ab corrupti consequatur pariatur beatae, est, odio accusamus vero soluta, quis laudantium sint eveniet quidem obcaecati perferendis maxime.</p>
-        </section>
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
 
-        <section id="Resources" style="margin-left:350px;margin-right:350px;line-height:3">
-            <h3>Resources</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius provident expedita possimus impedit modi? Beatae quo corrupti fugit, nihil esse possimus dignissimos, libero fuga non quisquam exercitationem dolore nostrum nam.</p>
-        </section>
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
 
-        <section id="How you can help" style="margin-left:350px;margin-right:350px;line-height:3">
-            <h3>How you can help</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo tempore velit ab vel autem aperiam, sequi reprehenderit, iusto quod eum quisquam incidunt. Hic impedit voluptatibus tempore nihil fugiat sunt? Totam?</p>
-        </section>
-
-        <section id="FAQ" style="margin-left:350px;margin-right:350px;line-height:3">
-            <h3>Frequently Asked Questions</h3>
-            <div class="container">
-                <img src="images/people/joshPhelps.jpg" alt="Avatar">
-                <p>Q: What happened to my potatoes?</p>
-            </div>
-            <div class="container darker">
-                <img src="images/healthyHouseLogo.png" alt="Avatar" class="right">
-                <p style="float:right">A: We don't know!</p>
-            </div>
-        </section>
-
-        <section id="Hotline" style="margin-left:350px;margin-right:350px;line-height:3">
-            <p id="demo"></p>
-            <h3>Hotline</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, natus! Aspernatur quae, perferendis nihil maiores iusto ab aperiam debitis adipisci harum! Ullam similique nostrum architecto quisquam! Nihil molestiae adipisci nam!</p>
-        </section>
-
-        <div class="sidenav">
-            <!-- fill these links in too! -->
-            <a href="#About this survey">About this Survey</a>
-            <a href="#Healthy House">Healthy House</a>
-            <a href="#Mission Statement">Mission Statement</a>
-            <a href="#Resources">Resources</a>
-            <a href="#How you can help">How you can help</a>
-            <a href="#FAQ">FAQ</a>
-            <a href="#Hotline">Hotline</a>
-        </div>
-    </body>
-
+<body bgcolor="#FFFFFF" background="images/bkgd.jpg" link="284A7A" vlink="284A7A" alink="284A7A" onLoad="MM_preloadImages('images/nav/buttonover_home.jpg','images/nav/buttonover_about.jpg','images/nav/buttonover_services.jpg','images/nav/buttonover_programs.jpg','images/nav/buttonover_training.jpg','images/nav/buttonover_newsevents.jpg','images/nav/buttonover_sponsors.jpg','images/nav/buttonover_contact.jpg')">
+<div align="center">
+  <table width="100%" height="0" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center" valign="top"> 
+        <table width="850" border="12" cellpadding="0" cellspacing="0" bordercolor="284A7A" bgcolor="#FFFFFF">
+          <tr>
+            <td height="751" align="center" valign="top"> 
+              <table width="850" height="362" border="0" cellpadding="0" cellspacing="0">
+                <tr> 
+                  <td height="362" align="center" valign="top"><img src="images/header.jpg" width="850" height="367"></td>
+                </tr>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td><table border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td><a href="index.html" target="_top" onClick="MM_nbGroup('down','group1','home','images/nav/buttonover_home.jpg',1)" onMouseOver="MM_nbGroup('over','home','images/nav/buttonover_home.jpg','images/nav/buttonover_home.jpg',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nav/button_home.jpg" alt="" name="home" width="86" height="41" border="0" onload=""></a></td>
+                        <td><a href="about.html" target="_top" onClick="MM_nbGroup('down','group1','about','images/nav/buttonover_about.jpg',1)" onMouseOver="MM_nbGroup('over','about','images/nav/buttonover_about.jpg','images/nav/buttonover_about.jpg',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nav/button_about.jpg" alt="" name="about" width="104" height="41" border="0" onload=""></a></td>
+                        <td><a href="services.html" target="_top" onClick="MM_nbGroup('down','group1','services','images/nav/buttonover_services.jpg',1)" onMouseOver="MM_nbGroup('over','services','images/nav/buttonover_services.jpg','images/nav/buttonover_services.jpg',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nav/button_services.jpg" alt="" name="services" width="95" height="41" border="0" onload=""></a></td>
+                        <td><a href="programs.html" target="_top" onClick="MM_nbGroup('down','group1','programs','images/nav/buttonover_programs.jpg',1)" onMouseOver="MM_nbGroup('over','programs','images/nav/buttonover_programs.jpg','images/nav/buttonover_programs.jpg',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nav/button_programs.jpg" alt="" name="programs" width="111" height="41" border="0" onload=""></a></td>
+                        <td><a href="training.html" target="_top" onClick="MM_nbGroup('down','group1','training','images/nav/buttonover_training.jpg',1)" onMouseOver="MM_nbGroup('over','training','images/nav/buttonover_training.jpg','images/nav/buttonover_training.jpg',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nav/button_training.jpg" alt="" name="training" width="98" height="41" border="0" onload=""></a></td>
+                        <td><a href="newsevents.html" target="_top" onClick="MM_nbGroup('down','group1','newsevents','images/nav/buttonover_newsevents.jpg',1)" onMouseOver="MM_nbGroup('over','newsevents','images/nav/buttonover_newsevents.jpg','images/nav/buttonover_newsevents.jpg',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nav/button_newsevents.jpg" alt="" name="newsevents" width="131" height="41" border="0" onload=""></a></td>
+                        <td><a href="sponsors.html" target="_top" onClick="MM_nbGroup('down','group1','sponsors','images/nav/buttonover_sponsors.jpg',1)" onMouseOver="MM_nbGroup('over','sponsors','images/nav/buttonover_sponsors.jpg','images/nav/buttonover_sponsors.jpg',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nav/button_sponsors.jpg" alt="" name="sponsors" width="105" height="41" border="0" onload=""></a></td>
+                        <td><a href="contact.html" target="_top" onClick="MM_nbGroup('down','group1','contact','images/nav/buttonover_contact.jpg',1)" onMouseOver="MM_nbGroup('over','contact','images/nav/buttonover_contact.jpg','images/nav/buttonover_contact.jpg',1)" onMouseOut="MM_nbGroup('out')"><img src="images/nav/button_contact.jpg" alt="" name="contact" width="120" height="41" border="0" onload=""></a></td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                <tr> 
+                  <td width="234" height="277" align="center" valign="top" bgcolor="8DA8D5"> 
+                    <table width="100%" border="0" cellpadding="5" cellspacing="0">
+                      <tr> 
+                        <td height="782" valign="top" bgcolor="5E79A7"> 
+                          <div align="center"> 
+                            <p><font color="#999999" size="3" face="Arial, Helvetica, sans-serif"><strong><a href="contact.html"><img src="images/box_requestservice.jpg" width="214" height="90" border="0"></a></strong></font></p>
+                            <p><strong></strong></p>
+                            <p><img src="images/elderabuse_logo.jpg" width="214" height="127"></p>
+                          </div></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td width="596" align="center" valign="top"><table width="100%" height="294" border="0" cellpadding="0" cellspacing="0">
+                      <tr valign="top"> 
+                        <td width="100%" height="294" align="center" valign="middle" bgcolor="D7E2F3"><img src="images/ind_pic1.jpg" width="596" height="294"></td>
+                      </tr>
+                    </table>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                      <tr> 
+                        <td height="266" valign="top"> <p><font color="#003366" face="Arial, Helvetica, sans-serif"><strong>Welcome! 
+                            Healthy House Within A MATCH Coalition</strong> is 
+                            a cultural and linguistic non-profit organization 
+                            with a mission to promote the well being and health 
+                            of all people in our multi-ethnic community through 
+                            the provision of education, services and advocacy 
+                            which are founded in respect for language, culture 
+                            and health equity.</font></p>
+                          <p><font color="#003366" face="Arial, Helvetica, sans-serif"> 
+                            Healthy House was originally established to address 
+                            the cultural clash between Hmong Shamanism and the 
+                            Western Medical establishment, so poignantly chronicled 
+                            in The Spirit Catches You and You Fall Down by Anne 
+                            Fadiman. It is internationally known for its Partners 
+                            in Healing Program which brings Hmong shamans together 
+                            with Western healthcare providers to collaborate and 
+                            ensure optimal outcomes for Hmong patients. </font></p>
+                          <p><font color="#003366" face="Arial, Helvetica, sans-serif">Our 
+                            <strong>Language Bank</strong> provides professional 
+                            healthcare interpreters, proficient in <br>
+                            <u>15 languages</u>, to healthcare facilities throughout 
+                            the Central Valley of California. Translation services 
+                            are also available. </font></p>
+                          <p><font color="#003366" face="Arial, Helvetica, sans-serif">Our 
+                            <strong>grant-based programs</strong> address health 
+                            disparities, striving to improve access and health 
+                            equity, in the under-represented cultural groups in 
+                            Merced County, one of the most ethnically diverse 
+                            counties in the entire country. Healthy House has 
+                            been providing these community-based services since 
+                            1998 in the San Joaquin Valley from Fresno to Stockton.</font></p>
+                          <p><font color="#003366" face="Arial, Helvetica, sans-serif">Healthy 
+                            House is a Member of the California Healthcare Interpreting 
+                            Association (CHIA), the National Council on Interpreting 
+                            in Health Care, and the Merced County Hispanic Chamber 
+                            of Commerce. We are also partners with Hmong Health 
+                            Collaborative and a Merced Homeless Connect Sponsor.</font><font face="Arial, Helvetica, sans-serif"><br>
+                            </font></p>
+                          </td>
+                      </tr>
+                    </table>
+                    
+                    
+                  </td>
+                </tr>
+              </table>
+              
+              <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                <tr> 
+                  <td height="36" align="center" valign="middle" bgcolor="D3DFF7"><font color="#003366" size="1" face="Arial, Helvetica, sans-serif"><strong><a href="index.html">HOME</a>&nbsp; 
+                    &nbsp; |&nbsp;&nbsp;&nbsp; <a href="about.html">ABOUT US</a>&nbsp; 
+                    &nbsp; |&nbsp;&nbsp; &nbsp; <a href="services.html">SERVICES</a>&nbsp; 
+                    &nbsp; |&nbsp;&nbsp;&nbsp; <a href="programs.html">PROGRAMS</a>&nbsp; 
+                    &nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; <a href="training.html">TRAINING</a>&nbsp;&nbsp;&nbsp; 
+                    |&nbsp;&nbsp;&nbsp; <a href="newsevents.html">NEWS / EVENTS</a>&nbsp; 
+                    &nbsp; |&nbsp;&nbsp;&nbsp; <a href="sponsors.html">SPONSORS</a>&nbsp; 
+                    &nbsp; |&nbsp;&nbsp;&nbsp; <a href="donate.html">DONATE</a>&nbsp;&nbsp;&nbsp; 
+                    |&nbsp; &nbsp;&nbsp; <a href="contact.html">CONTACT US</a></strong></font></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        
+      </td>
+    </tr>
+  </table>
+  <p><font color="#FF7F00" size="1" face="Arial, Helvetica, sans-serif"><font color="#FFFFFF"> 
+    <font color="#003366">&copy; 2016 Healthy House - Within A MATCH Coalition. 
+    All Rights Reserved. Powered by&nbsp;<a href="http://www.imediawest.com" target="_blank"><img src="images/IMW_logo_2009micro.gif" width="17" height="15" border="0"></a> 
+    </font></font></font><font color="#003366"><a href="http://www.imediawest.com" target="_blank"><font size="1" face="Arial, Helvetica, sans-serif">Imedia 
+    West</font></a></font></p>
+</div>
+</body>
 </html>
